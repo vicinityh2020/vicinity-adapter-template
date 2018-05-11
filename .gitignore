@@ -1,0 +1,11 @@
+/vas-adapter-template/target/
+target/
+rebel.xml
+rebel-remote.xml
+/.settings/
+/.project
+/.classpath
+.mvn/
+nbactions.xml
+nb-actions.xml
+nb-configuration.xml
