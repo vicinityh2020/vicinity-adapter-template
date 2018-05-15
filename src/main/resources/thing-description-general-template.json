@@ -1,0 +1,26 @@
+{
+    "name": "TBD",
+    "type": "Service (or any other thing from the Ontology)",
+    "version": "TBD",
+    "oid": "TBD",
+    "requirements": {
+        "properties": [
+        
+        ],
+        "actions": [
+        
+        ],
+        "events": [
+        
+        ]
+    },
+    "properties": [
+    
+    ],
+    "actions": [
+    
+    ],
+    "events": [
+    
+    ]
+}

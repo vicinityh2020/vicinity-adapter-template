@@ -9,6 +9,7 @@ import com.gnomon.adapter.template.pojos.Requests.ActionRequest;
 import com.gnomon.adapter.template.pojos.Requests.PropertyRequest;
 import com.gnomon.adapter.template.pojos.Response;
 
+import com.gnomon.adapter.template.services.AdapterService;
 import com.gnomon.adapter.template.services.impl.AdapterServiceImpl;
 
 import org.springframework.web.bind.annotation.RestController;
@@ -21,7 +22,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.http.MediaType;
 
 import org.apache.log4j.Logger;
-import com.gnomon.adapter.template.services.AdapterService;
 
 /**
  *
@@ -146,9 +146,10 @@ public class AdapterController {
      */
     @GetMapping(value = "/objects", 
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public Response generateResponseGetThingsDescription() throws Exception {
+    public String generateResponseGetThingsDescription() throws Exception {
         
         Response resp_ = vasService_.getThingsDescription();
-        return resp_;
+        return resp_.getMessage();
     }
+   
 }

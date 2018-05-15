@@ -1,0 +1,20 @@
+[
+    {
+        "name": "My Co2 Sensor",
+        "type": "CO2Sensor",
+        "version": "0.0.1",
+        "oid": "co2-sensor-001-oid",
+
+        "properties": [
+            {
+                "pid": "prop",
+                "monitors": "Luminance",
+                "read_link": {
+                    "href": "/objects/{oid}/properties/{pid}",
+                    "output": {
+                    }
+                }
+            }
+        ]
+    }
+]

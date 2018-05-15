@@ -9,8 +9,11 @@ import com.gnomon.adapter.template.pojos.Response;
 import com.gnomon.adapter.template.pojos.Requests.ActionRequest;
 import com.gnomon.adapter.template.pojos.Requests.PropertyRequest;
 
-import org.apache.log4j.Logger;
 import com.gnomon.adapter.template.services.AdapterService;
+
+import org.apache.commons.io.IOUtils;
+
+import org.apache.log4j.Logger;
 
 /**
  *
@@ -77,9 +80,20 @@ public class AdapterServiceImpl implements AdapterService {
     @Override
     public Response getThingsDescription() {
         
-        LOG.info("Inside getThingsDescription - TBD by each pilot depending on their VAS...");
+        LOG.info("Inside getThingsDescription - TBD by each pilot depending on their VAS/Things...");
         
-        Response resp_ = new Response("Not supported yet.");
+        ClassLoader cl = getClass().getClassLoader();
+        
+        String thingsDescription = "";
+        try {
+            thingsDescription = IOUtils
+                    .toString(cl.getResourceAsStream("thing-description-sample.json"));
+        } catch (Exception ex) {
+            LOG.error("Unable to load Things Description...");
+            ex.printStackTrace();
+        }
+        
+        Response resp_ = new Response(thingsDescription);
         return resp_;
     }
     
