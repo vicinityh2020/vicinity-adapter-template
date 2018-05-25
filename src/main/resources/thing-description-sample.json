@@ -1,20 +1,40 @@
-[
-    {
-        "name": "My Co2 Sensor",
-        "type": "CO2Sensor",
-        "version": "0.0.1",
-        "oid": "co2-sensor-001-oid",
+{
+    "adapter-id": "my-sample-thing-adapter",
+    "thing-descriptions":
+            [{
+                    "name": "My Sample CO2 Sensor Thing",
+                    "type": "core:CO2Sensor",
+                    "version": "0.0.1",
+                    "oid": "co2-sensor-001-sample-oid",
+                    "properties": [
+                        {
+                            "pid": "prop",
+                            "monitors": "adapters:CO2Concentration",
+                            "read_link": {
+                                "href": "/objects/{oid}/properties/{pid}",
+                                "output": {
+                                    "field": [
+                                        {
+                                            "name": "value",
+                                            "schema": {
+                                                "units": "ppm",
+                                                "type": "double"
+                                            }
+                                        },
+                                        {
+                                            "name": "timestamp",
+                                            "schema": {
+                                                "units": "datetime",
+                                                "type": "string"
+                                            }
+                                        }
+                                    ],
+                                    "type": "object"
+                                }
+                            }
+                        }
 
-        "properties": [
-            {
-                "pid": "prop",
-                "monitors": "Luminance",
-                "read_link": {
-                    "href": "/objects/{oid}/properties/{pid}",
-                    "output": {
-                    }
+                    ]
                 }
-            }
-        ]
-    }
-]
+            ]
+}

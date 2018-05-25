@@ -1,26 +1,29 @@
 {
-    "name": "TBD",
-    "type": "Service (or any other thing from the Ontology)",
-    "version": "TBD",
-    "oid": "TBD",
-    "requirements": {
-        "properties": [
-        
-        ],
-        "actions": [
-        
-        ],
-        "events": [
-        
-        ]
-    },
-    "properties": [
-    
-    ],
-    "actions": [
-    
-    ],
-    "events": [
-    
-    ]
+    "adapter-id": "TBD",
+    "thing-descriptions": [{
+            "name": "TBD",
+            "type": "Service",
+            "version": "TBD",
+            "oid": "TBD",
+            "requirements": {
+                "properties": [
+
+                ],
+                "actions": [
+
+                ],
+                "events": [
+
+                ]
+            },
+            "properties": [
+
+            ],
+            "actions": [
+
+            ],
+            "events": [
+
+            ]
+        }]
 }
